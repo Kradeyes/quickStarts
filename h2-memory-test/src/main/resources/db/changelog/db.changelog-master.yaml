@@ -1,0 +1,34 @@
+databaseChangeLog:
+  - logicalFilePath: db/changelog/db.changelog-lesson1.yaml
+  - changeSet:
+      id: 1
+      author: yanin.r.a
+      changes:
+        - createTable:
+            tableName: persons
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(250)
+                  constraints:
+                    nullable: false
+  - changeSet:
+      id: 2
+      author: yanin.r.a
+      changes:
+        - insert:
+            tableName: persons
+            columns:
+              - column:
+                  name: name
+                  value: Roma
+
+
+
