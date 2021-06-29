@@ -31,9 +31,6 @@ class PersonServiceTest {
     @MockBean
     private PersonService personService;
 
-    @MockBean
-    private PersonController personController;
-
     @Test
     void create() throws Exception {
         Person person = new Person();
